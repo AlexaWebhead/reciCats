@@ -1,0 +1,432 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/* Correct margin displayed oddly in IE 6/7. */
+
+form {
+    margin: 0;
+}
+
+/* Define consistent border, margin, and padding. */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5, and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/* Address Firefox 3+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/* Re-set default cursor for disabled elements. */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/* Remove inner padding and search cancel button in Safari 5 and Chrome on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/* Remove inner padding and border in Firefox 3+. */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical;
+}
+
+// `UI Consistency
+//----------------------------------------------------------------------------------------------------
+
+label {
+	margin-top: 15px;
+  display: block;
+  &.inline {
+    input {
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+//captcha
+label[for="captcha"] + img {
+  margin: 15px 10px 15px 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+button,
+.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  @include border-radius(10px);
+  @include background-clip(padding-box);
+  @include transition(all .5s ease-out);
+  background: $red url(../button.png) repeat-x;
+  border: none;
+  cursor: pointer;
+  color: $white;
+  display: inline-block;
+  // Helvetica Neue present, because it works better for line-height on buttons than Arial, on OS X.
+  font: normal 1em "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  outline: 0;
+  overflow: visible;
+  margin: 25px 0;
+  padding: 10px 15px;
+  text-shadow: black 0 1px 1px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: top;
+  width: auto;
+  &:hover {
+    background-color: lighten($red, 10%);
+    text-decoration: none;
+  }
+  &:active {
+    background-color: darken($red, 10%);
+    @include box-shadow(inset rgba(black, 0.25) 0 1px 2px 0);
+  }
+  // IE7
+  *padding-top: 2px;
+  *padding-bottom: 0;
+  // Kill phantom spacing and dotted border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+input[type="reset"],
+input[type="submit"] {
+  display: block;
+  clear: both;
+}
+
+.button {
+  // IE7
+  *padding-bottom: 3px;
+}
+
+button {
+  // IE7
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @include box-sizing(border-box);
+  @include background-clip(padding-box);
+  @include border-radius(0);
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  outline: 0;
+  margin: 15px 0;
+  padding: 19px 10px;
+  text-align: left;
+  font-size: 13px;
+  // Leaving out Helvetica Neue, to not throw off size="..."
+  // on inputs. Arial is more reliable, on Windows and OS X.
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 1.8em;
+  vertical-align: top;
+  @include border-radius(10px);
+  // IE7
+  *padding-top: 19px;
+  *padding-bottom: 18px;
+  *height: auto;
+  &[disabled] {
+    background-color: #eeeeee;
+  }
+}
+
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  width: 100%;
+  clear: left;
+  @media only screen and (#{$tab}){
+    width: 100%;
+  }
+}
+
+input[type="number"] {
+  width: 70px;
+}
+
+input,
+button,
+a.button,
+select,
+textarea {
+  &:invalid {
+    @include box-shadow(none);
+  }
+  &:focus {
+    border-top-color: #c1c1c1;
+    @include box-shadow($l-gray 0 0 5px 1px);
+    z-index: 1;
+  }
+}
+
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+  &:focus,
+  &:active {
+    @include box-shadow(none);
+  }
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  @include box-shadow(none);
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+// Separate rule for Firefox.
+// Separate rule for IE, too.
+// Cannot stack with WebKit's.
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+// Set height back to normal for Opera, WebKit, and IE.
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  // IE7
+  *height: auto;
+}
+
+// Tweaks for Safari + Chrome.
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+  select,
+  select[size="0"],
+  select[size="1"] {
+    // Base64 encoded "../images/select_arrow.gif"
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    min-height: 16px;
+  }
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border-color: #666666;
+  }
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  // Font family repeated, for Firefox.
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  // Kill phantom spacing and dotted border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+//error styling
+.error {
+  margin: -5px 0 10px;
+  color: $red;
+  font-size: 75%;
+  display: block;
+}

@@ -1,0 +1,55 @@
+@mixin quarters {
+	width: 23%;
+    text-align: center;
+    float: left;
+    @media only screen and (#{$mob}){
+		width: 45%;
+	}
+}
+
+@mixin thirds {
+	width: 30%;
+	margin-left: 5%;
+	float: left;
+	&:first-child {
+        margin-left: 0;
+    }
+	@media only screen and (#{$mob}){
+		width: 100%;
+		margin-left: 0;
+		float: none;
+	}
+}
+
+@mixin thirds-1($col) {
+	width: 40%;
+	padding: 2.5%;
+	float: $col;
+	@media only screen and (#{$mob}){
+		width: 100%;
+		padding: 5%;
+		float: none;
+	}
+}
+
+@mixin thirds-2($col) {
+	width: 60%;
+	padding: 2.5%;
+	float: $col;
+	@media only screen and (#{$mob}){
+		width: 100%;
+		padding: 5%;
+		float: none;
+	}
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @extend .cf;
+    @media only screen and (#{$mob}){
+    	width: 100%;
+    	padding: 0 5%;
+	}
+}

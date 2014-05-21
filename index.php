@@ -1,29 +1,24 @@
-<html>
-	<head>
-		<title>Testing Recipes</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<form action="recipes.php" method="post">
-			<label for="title">Title
-				<input type="text" name="title">
-			</label>
-			<label for="servings"># of servings
-				<input type="number" name="servings">
-			</label>
-			<label for="preptime">Prep Time (in minutes)
-				<input type="number" name="preptime">
-			</label>
-			<label for="cooktime">Cook Time (in minutes)
-				<input type="number" name="cooktime">
-			</label>
-			<label for="ingredients">Ingredients
-				<input type="text" name="ingredients">
-			</label>
-			<label for="directions">Directions
-				<textarea name="directions"></textarea>
-			</label>
-			<input type="submit">
-		</form>
+<?php
+	$section = "home";
+	$pageTitle = 'Friendly Recipe Box';
+	$pageDesc = 'View recipes, and search by 2 or more ingredients to find a recipe to whip up.';
+?>
+
+<?php include '_includes/_doc-head.php'; ?>
+		<?php include '_includes/_header.php'; ?>
+		<?php include '_includes/_nav.php'; ?>
+		<main>
+			<div class="wrapper">
+				<h2 class="page-title">Recent Recipes</h2>
+				<ul>
+					<li>
+						<h3><a href="#">Title</a></h3>
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</li>
+				</ul>
+			</div>
+		</main>
+		<?php include '_includes/_footer.php'; ?>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</body>
 </html>

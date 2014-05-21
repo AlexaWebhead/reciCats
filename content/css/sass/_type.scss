@@ -1,0 +1,67 @@
+body {
+    font-size: 100%;
+    font-family: 'Roboto Slab', Georgia, serif;
+    line-height: 1;
+}
+
+p {
+    margin: 0 0 1em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+    &.active,
+    &:hover,
+    &:focus {
+        outline: 0;
+        color: $d-gray;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 .5em;
+    small {
+        display: block;
+        font-weight: 300;
+        font-size: .5em;
+    }
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2.75em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+h5 {
+    font-size: 1.75em;
+}
+
+h6 {
+    font-size: 1.5em;
+}
+
+/* subheader styling */
+
+h2 small {
+    @media only screen and (#{$mob}){
+        display: block;
+    }
+}

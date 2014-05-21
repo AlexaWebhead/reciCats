@@ -1,0 +1,44 @@
+.search, .add {
+	width: 50%;
+	float: left;
+}
+
+.add {
+	input[type="text"] {
+		box-sizing: border-box;
+		height: calc(3em + 2px);
+		padding: 1em;
+		resize: none;
+	}
+	input[type="text"][required]:focus {
+		border-color: $blue;
+	}
+	input[type="text"][required]:focus + label[placeholder]:before {
+		color: $blue;
+	}
+	input[type="text"][required]:focus + label[placeholder]:before,
+	input[type="text"][required]:valid + label[placeholder]:before {
+		@include transition-duration(.2s);
+		@include transform(translate(0, -1.25em) scale(0.9, 0.9));
+	}
+	input[type="text"][required]:invalid + label[placeholder][alt]:before {
+		content: attr(alt);
+	}
+	input[type="text"][required] + label[placeholder] {
+		display: block;
+		pointer-events: none;
+		line-height: 1.75em;
+		margin-top: calc(-3em - 2px);
+		margin-bottom: calc((3em - 1em) + 2px);
+	}
+	input[type="text"][required] + label[placeholder]:before {
+		content: attr(placeholder);
+		display: inline-block;
+		margin: 0 calc(1em + 2px);
+		padding: 0 3px;
+		color: $gray;
+		white-space: nowrap;
+		@include transition(0.3s ease-in-out);
+		background: $white;
+	}
+}

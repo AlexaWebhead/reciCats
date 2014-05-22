@@ -1,7 +1,7 @@
 <?php
-	$section = 'search';
-	$pageTitle = 'Search by Ingredients';
-	$pageDesc = 'Add 2 or more ingredients to your search, to find compatible recipes.';
+	$section = "search";
+	$pageTitle = "Search by Ingredients";
+	$pageDesc = "Add 2 or more ingredients to your search, to find compatible recipes.";
 ?>
 
 <?php include '_includes/_doc-head.php'; ?>
@@ -10,19 +10,19 @@
 		<main>
 			<div class="wrapper">
 				<h2 class="page-title">Search by Ingredients</h2>
-				<p class="subhead">Add 2 or more ingredients to your search to find a recipe that includes what's in your cupboard!</p>
+				<p class="subhead">Add 2 or more ingredients to your search to find a recipe that includes what's in your cupboard. Separate ingredients by typing enter, or separating them with a comma. Happy hunting!</p>
 				<aside>
 					<p>Hints:</p>
-					<ul>
-						<li><p>You must search for at least 2 ingredients.</p></li>
+					<ul class="square">
+						<li><p>You should search for at least 2 ingredients.</p></li>
 						<li><p>The more ingredients you search for, the larger chance you'll end up with a more precise recipe.</p></li>
 					</ul>
 				</aside>
 				<form class="search" action="ingredients.php" method="post">
 					<label for="ingredients">Ingredients
-						<div data-tags-input-name="tag" data-pre-tags-separator="\n" id="ingredient-search">test-tag</div>
+						<div data-tags-input-name="ingredient" data-pre-tags-separator="\n" id="ingredient-search"></div>
 					</label>
-					<input type="submit">
+					<input type="submit" value="Let's do this">
 				</form>
 			</div>
 		</main>

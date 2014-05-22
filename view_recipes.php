@@ -1,7 +1,7 @@
 <?php
-	$section = "home";
-	$pageTitle = "Friendly Recipe Box";
-	$pageDesc = "View recipes, and search by 2 or more ingredients to find a recipe to whip up.";
+	$section = "view";
+	$pageTitle = "View Recipes";
+	$pageDesc = "View the global recipe box. What's for dinner?";
 ?>
 
 <?php include '_includes/_doc-head.php'; ?>
@@ -9,19 +9,16 @@
 		<?php include '_includes/_nav.php'; ?>
 		<main>
 			<div class="wrapper">
-				<h2 class="page-title">Recent Recipes</h2>
+				<h2 class="page-title">Recipe List</h2>
 				<ul>
-					<li>
+					<li class="recipe">
 						<h3><a href="#">Title</a></h3>
 						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
 					</li>
-				</ul>
-				<hr>
-				<h2 class="page-title">Popular Ingredients</h2>
-				<ul class="square">
-					<li><p>Oranges</p></li>
-					<li><p>Cinnamon</p></li>
-					<li><p>Chicken</p></li>
+					<li class="recipe">
+						<h3><a href="#">Recipe Title</a></h3>
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+					</li>
 				</ul>
 			</div>
 		</main>

@@ -12,8 +12,9 @@ $tab: "max-width: 768px";
 
 @import "compass";
 @import "compass/css3/user-interface";
-@import "_base";
+
 @import "_colors";
+@import "_base";
 @import "_type";
 @import "_forms";
 @import "_layout";
@@ -93,13 +94,19 @@ main {
     }
 }
 
-
 aside {
     width: 30%;
     margin: 0 0 5% 5%;
     padding-left: 5%;
     float: right;
     border-left: 1px solid $l-gray;
+}
+
+//recipes
+.recipe {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted $gray;
 }
 
 /* FOOTER */

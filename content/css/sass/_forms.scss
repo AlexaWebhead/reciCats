@@ -14,6 +14,7 @@ fieldset {
     border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
+    clear: both;
 }
 
 /**
@@ -144,6 +145,17 @@ textarea {
 
 // `UI Consistency
 //----------------------------------------------------------------------------------------------------
+
+form {
+  .halfsies-l {
+    width: 47.5%;
+    float: left;
+  }
+  .halfsies-r {
+    width: 47.5%;
+    float: right;
+  }
+}
 
 label {
 	margin-top: 15px;
@@ -288,7 +300,9 @@ input[type="week"] {
 }
 
 input[type="number"] {
+  height: 40px;
   width: 70px;
+  padding: 0 10px;
 }
 
 input,

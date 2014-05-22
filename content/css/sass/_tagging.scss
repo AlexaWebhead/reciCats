@@ -5,8 +5,10 @@
 	margin: 15px 0;
 	padding: 10px;
 	text-align: left;
-	cursor: text;
 	@include border-radius(10px);
+	&:focus {
+		cursor: text;
+	}
 }
 
 .tag {

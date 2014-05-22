@@ -20,7 +20,7 @@
 				</aside>
 				<form class="search" action="ingredients.php" method="post">
 					<label for="ingredients">Ingredients
-						<input type="search" name="ingredients">
+						<div data-tags-input-name="tag" data-pre-tags-separator="\n" id="ingredient-search">test-tag</div>
 					</label>
 					<input type="submit">
 				</form>
@@ -28,5 +28,14 @@
 		</main>
 		<?php include '_includes/_footer.php'; ?>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="/content/js/tagging.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var my_custom_options = {
+				    "tag-char": ""
+				};
+				$("#ingredient-search").tagging( my_custom_options );
+			})
+		</script>
 	</body>
 </html>
